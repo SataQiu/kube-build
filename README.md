@@ -30,7 +30,7 @@ docker pull shidaqiu/kube-build
 2.2. run kube-build, then you are inside the container
 
 ```
-docker run -it -v [k8s.io location]:/usr/lib/go/src/k8s.io -v [kubeadm location]:/home/kubeadm shidaqiu/kube-build
+docker run -it -v [k8s.io location]:/usr/lib/go/src/k8s.io -v [k8s.io location]/kubernetes/cmd/kubeadm:/home/kubeadm -v [k8s.io location]/kubernetes/vendor:/root/go/src shidaqiu/kube-build
 ```
 
 2.3. for example, if we want to build kubeadm, we can execute the following commands inside the container
